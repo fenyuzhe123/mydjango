@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form enctype="multipart/form-data" action="" method="post">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <br>
+    <input type="submit" value="上传文件">
+
+    <br>
+    <a href="{% url 'upload' %}">你好</a>
+
+
+</form>
+</body>
+</html>
