@@ -16,14 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from index import views
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index),
-    path('upload/', views.upload, name='upload'),
-    path('download/file1', views.download1, name='download1'),
-    path('download/file2', views.download2, name='download2'),
-
+    path('', include('index.urls')),
+    path('polls/', include('polls.urls'))
 
 ]
